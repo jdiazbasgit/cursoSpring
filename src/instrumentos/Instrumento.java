@@ -9,6 +9,8 @@ public class Instrumento implements InstrumentoInterface {
 	}
 	
 	
+	// esto es una prueba
+	
 	public Instrumento(String sonido) {
 		this.sonido = sonido;
 	}
