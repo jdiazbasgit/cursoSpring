@@ -3,13 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean class="musicos.Solista" id="solista">
-		<property name="instrumento" ref="trometa"></property>
-	</bean>
-
-	<bean class="instrumentos.Instrumento" id="trompeta">
-		<property name="sonido" value="tuuu, tuuu, tuuu en xml"></property>
-	</bean>
 
 
 </beans>
