@@ -10,7 +10,7 @@ public class ConciertoSolista {
 		Solista solista= new Solista();
 		Instrumento tambor= new Instrumento();
 		tambor.setSonido("pom, pom, pom");
-		solista.setInstrumetro(tambor);
+		solista.setInstrumento(tambor);
 		solista.tocar();
 	}
 

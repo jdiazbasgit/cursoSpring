@@ -9,7 +9,7 @@ import instrumentos.InstrumentoInterface;
 
 public abstract class Musico implements MusicoInterface {
 
-	private Instrumento instrumetro;
+	private Instrumento instrumento;
 	
 	private List<Instrumento> instrumentos;
 	
@@ -17,11 +17,13 @@ public abstract class Musico implements MusicoInterface {
 	}
 	
 	
-	public Musico(Instrumento instrumetro) {
-		this.instrumetro = instrumetro;
+	
+	public Musico(Instrumento instrumento) {
+		this.instrumento = instrumento;
 	}
-	
-	
+
+
+
 	public Musico(List<Instrumento> instrumentos) {
 		this.instrumentos = instrumentos;
 	}
@@ -31,19 +33,23 @@ public abstract class Musico implements MusicoInterface {
 	@Override
 	public abstract void tocar() ;
 	
-	public Instrumento getInstrumetro() {
-		return instrumetro;
-	}
-	public void setInstrumetro(Instrumento instrumetro) {
-		this.instrumetro = instrumetro;
-	}
-
+	
 	public List<Instrumento> getInstrumentos() {
 		return instrumentos;
 	}
 
 	public void setInstrumentos(List<Instrumento> instrumentos) {
 		this.instrumentos = instrumentos;
+	}
+
+
+	public Instrumento getInstrumento() {
+		return instrumento;
+	}
+
+
+	public void setInstrumento(Instrumento instrumento) {
+		this.instrumento = instrumento;
 	}
 	
 
