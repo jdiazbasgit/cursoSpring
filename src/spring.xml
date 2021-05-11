@@ -6,31 +6,5 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
-	<bean class="musicos.Solista" id="solista">
-		<property name="instrumento" ref="trompeta"></property>
-	</bean>
 	
-	<bean class="musicos.Solista" id="solista1">
-		<property name="instrumento" ref="trompeta"></property>
-	</bean>
-
-	<bean class="instrumentos.Instrumento" id="trompeta" scope="prototype">
-		<property name="sonido" value="tuuu, tuuu, tuuu en xml"></property>
-	</bean>
-
-	<bean class="instrumentos.Instrumento" id="tambor" >
-		<property name="sonido" value="pom, pom, pom en xml"></property>
-	</bean>
-
-
-	<bean class="musicos.HombreOrquesta" id="hombreOrquesta">
-	<property name="instrumentos" ref="coleccion"></property>
-	</bean>
-
-	<util:list id="coleccion">
-		<ref bean="tambor" />
-		<ref bean="trompeta" />
-	</util:list>
-
-
 </beans>
