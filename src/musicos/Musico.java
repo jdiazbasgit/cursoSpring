@@ -1,17 +1,17 @@
 package musicos;
 
 import java.util.List;
-
-import javax.sound.midi.Instrument;
+import java.util.TreeSet;
 
 import instrumentos.Instrumento;
-import instrumentos.InstrumentoInterface;
 
 public abstract class Musico implements MusicoInterface {
 
+	//@Autowired
 	private Instrumento instrumento;
 	
 	private List<Instrumento> instrumentos;
+	//private TreeSet<Instrumento> instrumentos;
 	
 	public Musico() {
 	}
