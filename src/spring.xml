@@ -13,6 +13,8 @@
 	<bean class="musicos.Solista" id="solista1">
 		<property name="instrumento" ref="trompeta"></property>
 	</bean>
+	
+	
 
 	<bean class="instrumentos.Instrumento" id="trompeta" scope="prototype">
 		<property name="sonido" value="tuuu, tuuu, tuuu en xml"></property>
@@ -21,10 +23,14 @@
 	<bean class="instrumentos.Instrumento" id="tambor" >
 		<property name="sonido" value="pom, pom, pom en xml"></property>
 	</bean>
+	
+	<bean class="instrumentos.Instrumento" id="guitarra" >
+		<property name="sonido" value="tlan, tlan, tlan en xml"></property>
+	</bean>
 
 
-	<bean class="musicos.HombreOrquesta" id="hombreOrquesta">
-	<property name="instrumentos" ref="coleccion"></property>
+	<bean class="musicos.HombreOrquesta" id="hombreOrquesta" >
+	<!--<property name="instrumentos" ref="coleccion"></property>-->
 	</bean>
 
 	<util:list id="coleccion">
