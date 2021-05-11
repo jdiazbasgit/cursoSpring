@@ -30,10 +30,10 @@
 
 
 	<bean class="musicos.HombreOrquesta" id="hombreOrquesta" >
-	<!--<property name="instrumentos" ref="coleccion"></property>-->
+	
 	</bean>
 
-	<util:list id="coleccion">
+	<util:list id="coleccion" >
 		<ref bean="tambor" />
 		<ref bean="trompeta" />
 	</util:list>
