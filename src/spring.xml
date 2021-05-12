@@ -16,25 +16,25 @@
 	
 	
 
-	<bean class="instrumentos.Instrumento" id="trompeta" scope="prototype">
+	<bean class="instrumentos.Instrumento" id="trompeta" scope="prototype" autowire-candidate="false">
 		<property name="sonido" value="tuuu, tuuu, tuuu en xml"></property>
 	</bean>
 
-	<bean class="instrumentos.Instrumento" id="tambor" >
+	<bean class="instrumentos.Instrumento" id="tambor" autowire-candidate="false">
 		<property name="sonido" value="pom, pom, pom en xml"></property>
 	</bean>
 	
-	<bean class="instrumentos.Instrumento" id="guitarra" >
+	<bean class="instrumentos.Instrumento" id="guitarra" autowire-candidate="true">
 		<property name="sonido" value="tlan, tlan, tlan en xml"></property>
 	</bean>
 
 
-	<bean class="musicos.HombreOrquesta" id="hombreOrquesta" >
+	<bean class="musicos.HombreOrquesta" id="hombreOrquesta" autowire="byName">
 	
 	</bean>
 
-	<util:list id="coleccion" >
-		<ref bean="tambor" />
+	<util:list id="instrumentos" >
+		<ref bean="guitarra" />
 		<ref bean="trompeta" />
 	</util:list>
 

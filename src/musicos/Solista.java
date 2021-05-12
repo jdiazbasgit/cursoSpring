@@ -2,20 +2,25 @@ package musicos;
 
 import instrumentos.Instrumento;
 
-public class Solista extends Musico {
+public class Solista implements MusicoInterface {
 
+	private Instrumento instrumento;
+	
 	@Override
 	public void tocar() {
 		System.out.println(getInstrumento().sonar());
 
 	}
-	
-	public Solista() {
+
+	public Instrumento getInstrumento() {
+		return instrumento;
 	}
 
-	public Solista(Instrumento instrumento) {
-		super(instrumento);
+	public void setInstrumento(Instrumento instrumento) {
+		this.instrumento = instrumento;
 	}
+	
+	
 
 	
 
