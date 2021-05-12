@@ -1,13 +1,21 @@
 package musicos;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+import excepciones.InstrumentoRotoException;
 import instrumentos.Instrumento;
 
+@Component
 public class Solista implements MusicoInterface {
 
+	@Autowired
+	@Qualifier("tambor")
 	private Instrumento instrumento;
 	
 	@Override
-	public void tocar() {
+	public void tocar() throws InstrumentoRotoException {
 		System.out.println(getInstrumento().sonar());
 
 	}

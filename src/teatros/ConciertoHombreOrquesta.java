@@ -2,6 +2,7 @@ package teatros;
 
 import java.util.ArrayList;
 
+import excepciones.InstrumentoRotoException;
 import instrumentos.Instrumento;
 import musicos.HombreOrquesta;
 
@@ -17,7 +18,12 @@ public class ConciertoHombreOrquesta {
 		hombreOrquesta.getInstrumentos().add(trompeta);
 		hombreOrquesta.getInstrumentos().add(tambor);
 		hombreOrquesta.getInstrumentos().add(guitarra);
-		hombreOrquesta.tocar();
+		try {
+			hombreOrquesta.tocar();
+		} catch (InstrumentoRotoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

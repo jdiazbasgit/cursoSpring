@@ -3,40 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
-	<bean class="musicos.Solista" id="solista">
-		<property name="instrumento" ref="trompeta"></property>
-	</bean>
-	
-	<bean class="musicos.Solista" id="solista1">
-		<property name="instrumento" ref="trompeta"></property>
-	</bean>
-	
-	
 
-	<bean class="instrumentos.Instrumento" id="trompeta" scope="prototype" autowire-candidate="false">
-		<property name="sonido" value="tuuu, tuuu, tuuu en xml"></property>
-	</bean>
-
-	<bean class="instrumentos.Instrumento" id="tambor" autowire-candidate="false">
-		<property name="sonido" value="pom, pom, pom en xml"></property>
-	</bean>
-	
-	<bean class="instrumentos.Instrumento" id="guitarra" autowire-candidate="true">
-		<property name="sonido" value="tlan, tlan, tlan en xml"></property>
-	</bean>
-
-
-	<bean class="musicos.HombreOrquesta" id="hombreOrquesta" autowire="byName">
-	
-	</bean>
-
-	<util:list id="instrumentos" >
-		<ref bean="guitarra" />
-		<ref bean="trompeta" />
-	</util:list>
-
-
+	<context:component-scan base-package="musicos"></context:component-scan>
+	<context:component-scan
+		base-package="instrumentos"></context:component-scan>
+		<context:component-scan base-package="aspectos"></context:component-scan>
 </beans>

@@ -1,5 +1,6 @@
 package teatros;
 
+import excepciones.InstrumentoRotoException;
 import instrumentos.Instrumento;
 import musicos.Solista;
 
@@ -11,7 +12,12 @@ public class ConciertoSolista {
 		Instrumento tambor= new Instrumento();
 		tambor.setSonido("pom, pom, pom");
 		solista.setInstrumento(tambor);
-		solista.tocar();
+		try {
+			solista.tocar();
+		} catch (InstrumentoRotoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
