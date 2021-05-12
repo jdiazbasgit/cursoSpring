@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import excepciones.InstrumentoRotoException;
+import musicos.MusicoInterface;
 import musicos.Solista;
 
 public class ConciertoSolistaSpring {
@@ -11,7 +12,7 @@ public class ConciertoSolistaSpring {
 	public static void main(String[] args) {
 
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
-		Solista pepe = (Solista) ctx.getBean("solista");
+		MusicoInterface pepe = (MusicoInterface) ctx.getBean("solista");
 
 		try {
 			pepe.tocar();

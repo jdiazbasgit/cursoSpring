@@ -8,7 +8,7 @@ public class Trompeta extends Instrumento {
 
 	
 	@Override
-	@Value("tuu, tuu, tuu en xml")
+	@Value("nada")
 	public void setSonido(String sonido) {
 		// TODO Auto-generated method stub
 		super.setSonido(sonido);

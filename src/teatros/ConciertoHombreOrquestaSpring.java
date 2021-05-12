@@ -5,16 +5,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import excepciones.InstrumentoRotoException;
 import musicos.HombreOrquesta;
+import musicos.MusicoInterface;
 
 public class ConciertoHombreOrquestaSpring {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx= new ClassPathXmlApplicationContext("spring.xml");
-		HombreOrquesta hombreOrquesta= (HombreOrquesta) ctx.getBean("hombreOrquesta");
+		MusicoInterface hombreOrquesta= (MusicoInterface) ctx.getBean("hombreOrquesta");
 		try {
 			hombreOrquesta.tocar();
 		} catch (InstrumentoRotoException e) {
-			System.out.println("señores se acabo el concierto, se ha roto el instrumento");
+			
 
 		}
 	}

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import anotaciones.Mecanico;
 import excepciones.InstrumentoRotoException;
 import instrumentos.Instrumento;
 
@@ -15,6 +16,7 @@ public class Solista implements MusicoInterface {
 	private Instrumento instrumento;
 	
 	@Override
+	@Mecanico
 	public void tocar() throws InstrumentoRotoException {
 		System.out.println(getInstrumento().sonar());
 
