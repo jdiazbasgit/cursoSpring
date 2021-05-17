@@ -11,11 +11,15 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
 
+	<bean class="instrumentos.Guitarra" id="guitarra">
+		<property name="sonido" value="sonido de guitarraaaaaa"></property>
+	</bean>
 	<context:component-scan base-package="musicos"></context:component-scan>
 	<context:component-scan
 		base-package="instrumentos"></context:component-scan>
 	<context:component-scan base-package="aspectos"></context:component-scan>
-	<context:component-scan base-package="conexiones"></context:component-scan>
+	<context:component-scan
+		base-package="conexiones"></context:component-scan>
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
-	
+
 </beans>

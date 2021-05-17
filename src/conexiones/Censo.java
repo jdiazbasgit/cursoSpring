@@ -2,13 +2,16 @@ package conexiones;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
+import anotaciones.Conexion;
 import anotaciones.RellenaArray;
+import anotaciones.Resultado;
 
 @Component
 public class Censo {
@@ -31,12 +34,17 @@ public class Censo {
 	@Resultado
 	public void metodo() {
 		
-		while(getResultset().next()) {
+		try {
+			while(getResultset().next()) {
+				
+			}
 			
-		}
-		
-		for (Persona persona : personas) {
-			System.err.println(------);
+			for (Persona persona : personas) {
+				System.err.println("");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 	}
